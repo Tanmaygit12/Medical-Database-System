@@ -1,0 +1,188 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      font-family: "Raleway", sans-serif;
+      font-weight: bolder;
+    }
+
+    body {
+      background-image: url("/templates/clean-medical-background_53876-97927.webp");
+      background-repeat: no-repeat;
+      background-size: 1920px 975px;
+    }
+    /*Position of the login box*/
+    .wrapper {
+      min-height: 90vh;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      margin-right: 500px;
+    }
+    /*Formating of Box*/
+    .registration_form {
+      background: white;
+      padding: 25px;
+      border-radius: 50px;
+      width: 400px;
+    }
+
+    /*Styling Heading*/
+    .registration_form .title {
+      text-align: center;
+      font-size: 30px;
+      text-transform: uppercase;
+      color: #77d5cc;	
+      letter-spacing: 4px;
+      font-weight: 900;
+      
+    }
+    /*Spacing between Heading and field*/
+    .form_wrap {
+      margin-top: 35px;
+    }
+
+    
+    /*Spacing between fields*/
+    .form_wrap .input_wrap {
+      margin-bottom: 20px;
+    }
+    /*spacing below last field "Register button*/
+    .form_wrap .input_wrap:last-child {
+      margin-bottom: 10;
+    }
+    /*Name of fields*/
+    .form_wrap .input_wrap label {
+      display: block;
+      margin-bottom: 3px;
+      color: #1a1a1f;
+    }
+    /*To keep Fisrt and Last name field side by side*/
+    .form_wrap .input_grp {
+      display: flex;
+      justify-content: space-between;
+    }
+    /*first name and last name spacing*/
+    .form_wrap .input_grp input[type="text"] {
+      width: 165px;
+    }
+    /*styling all input fields*/
+    .form_wrap input[type="text"] {
+      width: 100%;
+      border-radius: 3px;
+      border: 1.3px solid #9597a6;
+      padding: 10px;
+      outline: none;
+    }
+    .form_wrap input[type="password"] {
+      width: 100%;
+      border-radius: 3px;
+      border: 1.3px solid #9597a6;
+      padding: 10px;
+      outline: none;
+    }
+    .form_wrap input[type="number"] {
+      width: 100%;
+      border-radius: 3px;
+      border: 1.3px solid #9597a6;
+      padding: 10px;
+      outline: none;
+    }
+
+    .form_wrap input[type="text"]:focus {
+      border-color: #77d5cc;
+    }
+    .form_wrap input[type="number"]:focus {
+      border-color: #77d5cc;
+    }
+    .form_wrap input[type="password"]:focus {
+      border-color: #77d5cc;
+    }
+    /*Border of gender box*/
+    .form_wrap ul {
+      border: 1px solid #77d5cc;
+      width: 70%;
+      background: #dffcf8;
+      margin-left: 15%;
+      padding: 8px 10px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    /*options inside gender */
+    .form_wrap ul li:first-child {
+      margin-right: 15px;
+    }
+
+    .form_wrap ul .radio_wrap {
+      position: relative;
+       
+    }
+    
+    .form_wrap ul .radio_wrap .input_radio {
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 0;
+    }
+    /*Selector inside gender tag */
+    .form_wrap ul .radio_wrap span {
+      display: inline-block;
+      font-size: 17px;
+      font-weight: 900;
+      padding: 3px 8px;
+      border-radius: 15px;
+      color: #77d5cc;
+    }
+
+    .form_wrap .input_radio:checked ~ span {
+      background: #77d5cc;
+      color: white;
+    }
+
+    /*Form submit Button*/
+    .form_wrap .submit_btn {
+      width: 100%;
+      background: #77d5cc;
+      padding: 10px;
+      border: 0;
+      color: white;
+      font-size: 17px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    .form_wrap .submit_btn:hover {
+      background: #bde9e3;
+    }
+    .form_wrap p {
+      font-family: "Raleway", sans-serif;
+      text-align: center;
+    }
+    .form_wrap a {
+        display: block;
+        text-align: center;
+        width: 25%;
+        margin-left: 130px;
+        background: #77d5cc;
+        padding: 10px;
+        border: 0;
+        color: white;
+        font-size: 15px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        cursor: pointer;
+      }
+     
+    .form_wrap a:hover{
+       
+       background-color: #bde9e3;
+
+    }
+     
+  

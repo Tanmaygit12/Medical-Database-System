@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+           body{
+               background-image: url("fpage.png");
+               background-repeat: no-repeat;
+               background-size: 1920px 975px;
+           }
+            .pform{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 500px;
+                    padding: 40px;
+                    transform: translate(-50%, -50%);
+                    background: #bde9e3;
+                    box-sizing: border-box;
+                    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+                    border-radius: 10px;
+                    }
+            .pform label{
+                font-family: "Raleway", sans-serif;
+                font-weight: 600;
+                display: inline-block;
+                position: relative;
+                  
+            }
+            .pform input{
+                width: 100%;
+                border-radius: 5px;
+                border: 1.3px solid #000000;
+                padding: 8px;
+                outline: none;
+                margin: 5px;
+                display: flex;
+                justify-content: space-between;
+                border: #77d5cc;
+                
+            }
+            .pform input:focus{
+                border-color: #77d5cc;
+            }
+            .pform .dropdown{
+                font-family: "Raleway", sans-serif;
+                font-weight: 600;
+                display: inline-block;
+                position: relative;
+            }
+            .pform .dropdown select{
+                padding: 8px;
+                border-radius: 50px;
+                font-family: "Raleway", sans-serif;
+                font-weight: 600;
+            
+                margin: 10px;
+            }
+            .pform .btn{
+                width: 100%;
+                background: #77d5cc;
+                padding: 4px;
+                border: 0px;
+                border-radius: 50px;
+                color: white;
+                font-size: 17px;
+                border-radius: 3px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                cursor: pointer;
+            }
+            .pform .btn:hover{
+                background-color: #b4f5ec;
+            }
+            .logout{
+                display: block;
+                text-align: center;
+                width: 5%;
+                margin-left: 1750px;
+                background: #77d5cc;
+                padding: 10px;
+                border: 0;
+                color: white;
+                font-size: 15px;
+                border-radius: 3px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                cursor: pointer;
+            }
+          
+              
+    </style>
+  </head>
+  <body>
+      
+        <form action="/mainPage" method="POST">
+        <div class="pform">
+        <label for="Hname">College Name :</label><br />
+        <input type="text" id="Hname" name="hname" required/><br />
+        <label for="doctor">Event Name :</label><br />
+        <input type="text" id="doctor" name="doctor" required/><br />
+        <label for="date">Date :</label><br />
+        <input type="date" id="date" name="date" required/><br />
+        <label for="blood pressure">Venue :</label><br />
+        <input type="number" id="bp" name="bp"required /><br />
+        <label for="sugar level ">Timing :</label><br />
+        <input type="number" id="sl" name="sl" required/><br />
+       
+        <label for="diagnosed with">Fees :</label><br />
+        <input type="text" id="dw" name="dw" required/><br />
+        <label for="life insaurance">Age :</label><br />
+        <input type="text" id="li" name="li" required/><br />
+        <div class="btn">
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </div>
+    </form>
+     
+  </body>
+</html>

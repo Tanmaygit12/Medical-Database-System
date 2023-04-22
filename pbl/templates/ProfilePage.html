@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-image: url("pngtree.jpg");
+        background-repeat: no-repeat;
+        background-size: 1920px 975px;
+      }
+      .main h2 {
+        font-family: "Raleway", sans-serif;
+        text-align: center;
+        background-color: #9dd8d2;
+        border: 2px solid #9dd8d2;
+        box-shadow: 1px 1px 8px 0 grey;
+        color: white;
+        font-weight: bolder;
+        letter-spacing: 4px;
+        font-size: 35px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 8px;
+      }
+      .card {
+        border-radius: 18px;
+        box-shadow: 1px 1px 8px 0 grey;
+        height: auto;
+        margin-bottom: 20px;
+        padding: 20px 0 20px 50px;
+        box-sizing: border-box;
+
+        padding: 0;
+        min-height: 30vh;
+        background-color: #b2dad5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 900px;
+        margin-left: 500px;
+      }
+
+      .card section img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-right: 100px;
+      }
+      .card tbody {
+        border: none;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        height: 270px;
+        width: 80%;
+      }
+      .card td {
+        padding: 5px;
+      }
+      .info table {
+        margin-top: 50px;
+        font-family: "Raleway", sans-serif;
+        table-layout: fixed;
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .info td {
+        border: 1px solid black;
+        background-color: white;
+        padding: 10px;
+        text-align: center;
+        height: 50px;
+      }
+      .info th {
+        border: 1px solid black;
+
+        padding: 20px;
+        background-color: #b2dad5;
+
+        text-align: center;
+        font-size: 18px;
+      }
+/*Navbar*/
+.navbar{
+  margin: 0;
+  padding: 0;
+  color: #f2f2f2;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+nav{
+  border-radius: 8px;
+  box-shadow: 1px 1px 8px 0 grey;
+  background: #9dd8d2;
+  border: 1px solid #9dd8d2;
+  border-left: none;
+  border-right: none;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li.logo{
+  flex: 1;
+  font-size: 30px;
+  font-weight: 700;
+}
+nav ul div.items{
+ 
+  display: inline-flex;
+}
+nav ul div.items a{
+  text-decoration: none;
+  font-size: 18px;
+  padding: 0 12px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+}
+nav ul div.items a:hover{
+  color: rgb(236, 243, 243);
+}
+nav ul .search-icon{
+  height: 40px;
+  width: 240px;
+  display: flex;
+  background: #f2f2f2;
+  border-radius: 5px;
+}
+nav ul .search-icon input{
+  height: 100%;
+  width: 200px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  color: #000;
+  font-size: 16px;
+  border-radius: 5px 0 0 5px;
+}
+nav ul .search-icon .icon{
+  height: 100%;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+nav ul .search-icon .icon:hover{
+  background: #e6e6e6;
+}
+nav ul .search-icon .icon span{
+  color: #222222;
+  font-size: 18px;
+}
+nav ul li.btn{
+  font-size: 29px;
+  flex: 1;
+  padding: 0 40px;
+  display: none;
+}
+nav ul li.btn span{
+  height: 42px;
+  width: 42px;
+  text-align: center;
+  line-height: 42px;
+  border: 1px solid #151515;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1052px) {
+  nav{
+    padding: 10px 40px 10px 0px;
+  }
+  nav ul li.logo{
+    display: none;
+  }
+  nav ul div.items{
+    flex: 4;
+  }
+}
+@media screen and (max-width: 800px){
+  nav ul li.btn{
+    display: block;
+  }
+  nav{
+    z-index: 1;
+    padding: 9px 40px 9px 0;
+  }
+  nav ul div.items{
+    z-index: -1;
+    position: fixed;
+    top: -220px;
+    right: 0;
+    width: 100%;
+    background: #222222;
+    display: inline-block;
+    transition: top .4s;
+  }
+  nav ul div.items.show{
+    top: 60px;
+  }
+  nav ul div.items li{
+    text-align: center;
+    line-height: 30px;
+    margin: 30px 0;
+  }
+  nav ul div.items li a{
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 405px) {
+  nav ul{
+    flex-wrap: nowrap;
+  }
+  nav ul li.search{
+    width: 50vmin;
+  }
+  nav ul li input{
+    width: 40vmin;
+  }
+  nav ul li .search-icon{
+    width: 10vmin;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  padding: 0 40px;
+  z-index: -2;
+}
+.content .text{
+  font-size: 40px;
+  font-weight: 800;
+  padding: 5px 0;
+  color: #202020;
+}
+.content .p{
+  font-size: 28px;
+  font-weight: 600;
+  color: #202020;
+}
+.link-button .ap{
+  text-decoration: none;
+  display: block;
+  border: 1px solid #b2dad5 ;
+  width:fit-content;
+  padding: 5px;
+  font-family: "Raleway", sans-serif;
+  background-color:#b2dad5;
+  margin-top: 10px;
+  box-shadow:  2px  2px gray ;
+  color: #000;
+  margin: auto;
+}
+.link-button .ap:hover{
+  background-color: #b4f5ec;
+}
+ 
+.link-button .fo{
+  display: block;
+  border: 1px solid #b2dad5;
+  width:fit-content;
+  padding: 5px;
+  font-family: "Raleway", sans-serif;
+  background-color:#b2dad5;
+  margin-top: 10px;
+  box-shadow:  2px  2px gray ;
+  color: #000;
+  margin-top: 5px;
+  margin-left: 910px;
+  text-decoration: none;
+}
+.link-button .fo:hover{
+  background-color: #b4f5ec;
+}
+.link-button{
+  margin-top: 10px;
+}
+ 
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+    <nav>
+      <ul>
+        
+         <div class="items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+         </div>
+         <li class="search-icon">
+            <input type="search" placeholder="Search">
+            <label class="icon">
+            <span class="fas fa-search"></span>
+            </label>
+         </li>
+      </ul>
+   </nav>
+  </div>
+  
+    <div class="main">
+      <h2>PROFILE</h2>
+    </div>
+
+    <div class="card">
+      <section>
+        <img src="https://i.ibb.co/yNGW4gg/avatar.png" id="blah" alt="Avatar" />
+      </section>
+
+      <table>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td>Rahul Singh</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>:</td>
+            <td>rahulsingh@gmail.com</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>:</td>
+            <td>Pune,India</td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td>:</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>:</td>
+            <td>Male</td>
+          </tr>
+          <tr>
+            <td>Occupation</td>
+            <td>:</td>
+            <td>Engineer</td>
+          </tr>
+          <tr>
+            <td>Phone Number</td>
+            <td>:</td>
+            <td>9876543210</td>
+          </tr>
+          <tr>
+            <td>Date Of Birth</td>
+            <td>:</td>
+            <td>19/01/2002</td>
+          </tr>
+          <tr>
+            <td>Blood Group</td>
+            <td>:</td>
+            <td>AB+</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info">
+      <table>
+        <thead>
+          <tr>
+            <th class="hname">Hospital Name</th>
+            <th>Doctor Name</th>
+            <th>Date</th>
+            <th>Blood Pressure</th>
+            <th>Sugar Level</th>
+            <th>Diagnosed With</th>
+            <th>Life Insaurance</th>
+            <th>Date On Admitted</th>
+            <th>Date Of Discharge</th>
+            <th class="dname">Department</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Birla Hospital</td>
+            <td>Dr.A Khobragade</td>
+            <td>14/03/2022</td>
+            <td>120</td>
+            <td>130</td>
+            <td>Malaria</td>
+            <td>SBI Life Insaurance</td>
+            <td>12/03/2022</td>
+            <td>14/03/2022</td>
+            <td>OPD</td>
+          </tr>
+          <tr>
+            <td>Birla Hospital</td>
+            <td>Dr.Tushar Dervankar</td>
+            <td>1/04/2022</td>
+            <td>118</td>
+            <td>131</td>
+            <td>Dental Cavity</td>
+            <td>SBI Life Insaurance</td>
+            <td>NIL</td>
+            <td>NIL</td>
+            <td>Dental</td>
+          </tr>
+          <tr>
+            <td class="bh">Birla Hospital</td>
+            <td>Dr.Aditya Babar</td>
+            <td>10/05/2022</td>
+            <td>119</td>
+            <td>130</td>
+            <td>Eye Checkup</td>
+            <td>SBI Life Insaurance</td>
+            <td>NIL</td>
+            <td>NIL</td>
+            <td class="ent">ENT</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="link-button">
+     
+        <a href="/appointment" class="ap" target="_blank">Book Appointment</a>
+        <a href="/form" class="fo" target="_blank">Add Data</a>
+     
+  </div>
+  </body>
+</html>

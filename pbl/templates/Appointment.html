@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        .pform h1{
+            color: black;
+            margin-top: auto;
+            margin-bottom: 50px;
+            font-family: "Raleway", sans-serif;
+            font-weight: bolder;
+            text-transform: uppercase;
+            text-align: center; 
+        }
+           body{
+               background-image: url("pngtree.jpg");
+               background-repeat: no-repeat;
+               background-size: 1920px 975px;
+           }
+            .pform{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 600px;
+                    padding: 40px;
+                    transform: translate(-50%, -50%);
+                    background: #bde9e3;
+                    box-sizing: border-box;
+                    box-shadow: 5px 15px 25px rgba(0,0,0,.6);
+                    border-radius: 10px;
+                    opacity: 85%;
+                    }
+            .pform label{
+                font-family: "Raleway", sans-serif;
+                font-weight: 600;
+                display: inline-block;
+                position: relative;
+                  
+            }
+            .pform input{
+                width: 100%;
+                border-radius: 5px;
+                border: 1.3px solid #000000;
+                padding: 8px;
+                outline: none;
+                margin: 5px;
+                display: flex;
+                justify-content: space-between;
+                border: #77d5cc;
+                
+            }
+            .pform input:focus{
+                border-color: #77d5cc;
+            }
+            .pform .dropdown{
+                font-family: "Raleway", sans-serif;
+                font-weight: 600;
+                display: inline-block;
+                position: relative;
+            }
+            .pform .dropdown select{
+                padding: 8px;
+                border-radius: 50px;
+                font-family: "Raleway", sans-serif;
+                font-weight: 600;
+            
+                margin: 10px;
+            }
+            .btn{
+                display: block;
+                text-align: center;
+                width: 100%;
+                background: #77d5cc;
+                padding: 4px;
+                border: 0px;
+                border-radius: 50px;
+                color: rgb(190, 15, 15);
+                font-size: 17px;
+                border-radius: 3px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                cursor: pointer;
+            }
+            .btn a:link{
+                color:white;
+            }
+            .pform .btn:hover{
+                background-color: #b4f5ec;
+            }
+             
+              
+    </style>
+  </head>
+  <body>
+        
+        <form action="/appointment" method="POST">
+          {% csrf_token %}
+        <div class="pform">
+        <h1>Make An Appointment</h1>
+        <label for="patient name">Patient Name :</label><br />
+        <input type="text" id="patient name" name="pname" required/><br />
+        <label for="hospital name">Hospital Name :</label><br />
+        <input type="text" id="hospital name" name="hname" required/><br />
+        <label for="doctor">Doctor Name :</label><br />
+        <input type="text" id="doctor" name="doctor" required/><br />
+        <label for="date">Date :</label><br />
+        <input type="date" id="date" name="date" required/><br />
+        <label for="time">Time :</label><br />
+        <input type="time" id="time" name="time" required/><br />
+        <div class="dropdown">    
+        <p>
+              Department:
+              <div class="dropdown2">
+              <select name="department" class="department" required>
+                <option value="">--Select Department--</option>
+                <option value="Outpatient Department (OPD)">
+                  Outpatient Department (OPD)
+                </option>
+                <option value=" Operating Theatre">Operating Theatre</option>
+                <option value="Intensive Care Unit">Intensive Care Unit</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="ENT">ENT</option>
+                <option value="General Surgery">General Surgery</option>
+                <option value="Gynaecology">Gynaecology</option>
+                <option value="Pediatrics">Pediatrics</option>
+                <option value="Neurology">Neurology</option>
+                <option value=" Dental">Dental</option>
+              </select>
+          </div>
+            </p>
+          </div>
+        <div class="btn">
+          <input type="submit" value="Book Now"/>
+        </div>
+      </div>
+       
+    </form>
+     
+  </body>
+</html>
